@@ -1,7 +1,12 @@
 fn reduce_fraction(fraction: (u32, u32)) -> (u32, u32) {
     let (numerator, denominator) = fraction;
     let mut largest_common_denominator = 1;
-    for n in 2..numerator {
+    let smallest = if denominator < numerator {
+        denominator
+    } else {
+        numerator
+    };
+    for n in 2..smallest {
         let is_num_div_by_n = numerator % n == 0;
         let is_den_div_by_n = denominator % n == 0;
         if is_num_div_by_n && is_den_div_by_n {
