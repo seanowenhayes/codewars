@@ -1,7 +1,6 @@
 use std::u32;
 
 fn sum_two_smallest_numbers(numbers: &[u32]) -> u32 {
-    let nums = Vec::from(numbers);
     let mut smallest = u32::MAX;
     let mut second_smallest = u32::MAX;
     for &num in numbers {
