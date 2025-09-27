@@ -1,6 +1,7 @@
 mod alphabet_to_number;
 mod array_diff;
 mod create_phone_number;
+mod odd_or_even;
 mod pin_validate;
 mod printer_error;
 mod rectangle_into_squares;
