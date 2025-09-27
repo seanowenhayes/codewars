@@ -1,7 +1,5 @@
 // https://www.codewars.com/kata/5949481f86420f59480000e7/train/rust
 
-use std::ops::Add;
-
 fn odd_or_even(numbers: Vec<i32>) -> String {
     let sum: i32 = numbers.iter().sum();
     if sum % 2 == 0 {
