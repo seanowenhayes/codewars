@@ -1,6 +1,7 @@
 mod alphabet_to_number;
 mod array_diff;
 mod create_phone_number;
+mod human_readable_time;
 mod isbn_10_validation;
 mod make_the_dead_fish_swim;
 mod odd_or_even;
