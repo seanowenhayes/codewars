@@ -6,14 +6,14 @@ fn pad(time: u32) -> String {
     }
 }
 
-const seconds_in_minute: u32 = 60;
-const seconds_in_hour: u32 = 60 * 60;
+const SECONDS_IN_MINUTE: u32 = 60;
+const SECONDS_IN_HOUR: u32 = 60 * 60;
 
 fn make_readable(seconds: u32) -> String {
-    let hours = seconds / seconds_in_hour;
-    let seconds_left = seconds - hours * seconds_in_hour;
-    let minutes = seconds_left / seconds_in_minute;
-    let seconds_left = seconds_left % seconds_in_minute;
+    let hours = seconds / SECONDS_IN_HOUR;
+    let seconds_left = seconds - hours * SECONDS_IN_HOUR;
+    let minutes = seconds_left / SECONDS_IN_MINUTE;
+    let seconds_left = seconds_left % SECONDS_IN_MINUTE;
     format!("{}:{}:{}", pad(hours), pad(minutes), pad(seconds_left))
 }
 #[cfg(test)]
