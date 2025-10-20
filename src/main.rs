@@ -8,6 +8,7 @@ mod odd_or_even;
 mod pin_validate;
 mod prime_factors;
 mod printer_error;
+mod pyramid_slide_down;
 mod rectangle_into_squares;
 mod reduce_fraction;
 mod roman_numerals_encoder;
