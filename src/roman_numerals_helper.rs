@@ -59,7 +59,7 @@ pub fn to_roman(r: u32) -> String {
     vec![CM, D, CD, C, XC, L, XL, X, IX, V, IV]
         .iter()
         .for_each(|roman_numeral| {
-            if remainder >= *roman_numeral {
+            while remainder >= *roman_numeral {
                 roman.push_str(numerals.get(roman_numeral).expect("MISSING ROMAN NUMERAL"));
                 remainder -= roman_numeral;
             }
@@ -126,6 +126,7 @@ mod example_tests {
 
     #[test]
     fn _1_to_roman() {
+        assert_to_roman(1775, "MDCCLXXV");
         assert_to_roman(1000, "M");
         assert_to_roman(4, "IV");
         assert_to_roman(1, "I");
