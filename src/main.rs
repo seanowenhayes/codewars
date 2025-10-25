@@ -12,6 +12,7 @@ mod pyramid_slide_down;
 mod rectangle_into_squares;
 mod reduce_fraction;
 mod roman_numerals_encoder;
+mod so_many_permutations;
 mod sort_the_odd;
 mod two_sum;
 
