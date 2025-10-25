@@ -70,7 +70,35 @@ pub fn to_roman(r: u32) -> String {
 }
 
 pub fn from_roman(s: &str) -> u32 {
-    todo!("Your code here!")
+    let mut answer = 0;
+    let mut input = s.to_string();
+    let digits: HashMap<&str, u32> = HashMap::from([
+        ("M", M),
+        ("CM", CM),
+        ("D", D),
+        ("CD", CD),
+        ("C", C),
+        ("XC", XC),
+        ("L", L),
+        ("XL", XL),
+        ("X", X),
+        ("IX", IX),
+        ("V", V),
+        ("IV", IV),
+        ("I", I),
+    ]);
+    while input.len() > 0 {
+        for numeral in vec![
+            "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I",
+        ] {
+            if input.starts_with(numeral) {
+                let digit = digits.get(numeral).expect("Missing numeral!");
+                answer += digit;
+                input = input.replacen(numeral, "", 1);
+            }
+        }
+    }
+    answer
 }
 
 // Add your tests here.
@@ -110,6 +138,7 @@ mod example_tests {
         assert_from_roman("XXI", 21);
         assert_from_roman("I", 1);
         assert_from_roman("IV", 4);
+        assert_from_roman("IX", 9);
         assert_from_roman("MMVIII", 2008);
         assert_from_roman("MDCLXVI", 1666);
     }
