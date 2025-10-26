@@ -16,6 +16,7 @@ mod roman_numerals_helper;
 mod so_many_permutations;
 mod sort_the_odd;
 mod two_sum;
+mod weight_for_weight;
 
 fn main() {
     println!("Hello, world!");
