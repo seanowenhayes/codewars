@@ -17,6 +17,7 @@ mod roman_numerals_encoder;
 mod roman_numerals_helper;
 mod so_many_permutations;
 mod sort_the_odd;
+mod sum_of_intervals;
 mod two_sum;
 mod weight_for_weight;
 
