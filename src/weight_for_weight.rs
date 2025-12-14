@@ -1,5 +1,3 @@
-use std::cmp::Ordering;
-
 fn order_weight(s: &str) -> String {
     let mut weights: Vec<(u32, String)> = Vec::new();
     s.split(" ").for_each(|weight| {

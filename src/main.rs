@@ -15,6 +15,7 @@ mod rectangle_into_squares;
 mod reduce_fraction;
 mod roman_numerals_encoder;
 mod roman_numerals_helper;
+mod snail_sort;
 mod so_many_permutations;
 mod sort_the_odd;
 mod sum_of_intervals;
